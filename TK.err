@@ -1,8 +1,0 @@
-src\TK.C(925): Warning! W303: Parameter 'Size' has been defined, but not referenced
-src\TK.C(925): Warning! W303: Parameter 'Values' has been defined, but not referenced
-src\TK.C(2199): Warning! W136: Comparison equivalent to 'unsigned == 0'
-src\TK.C(2210): Warning! W136: Comparison equivalent to 'unsigned == 0'
-src\TK.C(2212): Warning! W136: Comparison equivalent to 'unsigned == 0'
-src\TK.C(2224): Warning! W136: Comparison equivalent to 'unsigned == 0'
-src\TK.C(2235): Warning! W136: Comparison equivalent to 'unsigned == 0'
-src\TK.C(2426): Warning! W200: 'hStock' has been referenced but never assigned a value
