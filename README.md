@@ -3,7 +3,7 @@ Update of "very old and buggy" library GLAUX on Windows 11 64 bit (create very n
 
 It's just to see if this library can be recompiled with all free compilers C/C++ available on Windows 11 64 bit in ... 2025 (already !!).
 
-Test realized with help of IDE Code::Blocks (because this IDE can adapt very easy with all categories of "stange" compilers C/C++ available (at date), and because I success build "an test" of build DLL (very simply DLL that do arithmetic calculs on integer and double : https://github.com/tdechaize/Test_DLL_ALL) with ALL of these compilers. Today, I want confront this first experience with real library "in real world"...
+Test realized with help of IDE Code::Blocks (because this IDE can adapt very easy with all categories of "strange" compilers C/C++, and also very "celebre" compilers available (at date) on W11, and because I success build "an test" of build DLL (very simply DLL that do arithmetic calculs on integer and double : https://github.com/tdechaize/Test_DLL_ALL) with ALL of these compilers. Today, I want confront this first experience with real library "in real world"...
 
 # Result of test presence of library GLAUX into free compilers on Windows 11 64 bit
 				
