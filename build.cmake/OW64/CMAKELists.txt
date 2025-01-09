@@ -1,0 +1,50 @@
+#-------------------------------------------------------------------------------------
+cmake_minimum_required(VERSION 3.9.1)
+# Toolchain File
+
+# The target of this operating systems is 
+SET(CMAKE_SYSTEM_NAME Windows)
+set(CMAKE_CXX_EXTENSIONS  ON)
+
+# here is the target environment located
+SET(CMAKE_FIND_ROOT_PATH  "C:/WATCOM/binnt64" )
+
+# which compilers to use for C and C++
+SET(CMAKE_C_COMPILER "C:/WATCOM/binnt64/wcl386.exe" )
+SET(CMAKE_CXX_COMPILER "C:/WATCOM/binnt64/wcl386.exe" )
+SET(CMAKE_RC_COMPILER "C:/WATCOM/binnt64/wrc.exe" )
+
+message(STATUS "Setting WATCOM C/C++ flags to compile and link")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -q -c -g -bcl=nt")
+set(CMAKE_LINK_FLAGS "${CMAKE_LINK_FLAGS} quiet system nt_win")
+
+include_directories(BEFORE "C:/WATCOM/h/nt" "C:/WATCOM/h")
+
+if(${CMAKE_BUILD_TYPE} MATCHES Debug)
+    message("Debug Build")
+	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -d_DEBUG -dDEBUG -d2")
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binOW32/Debug")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binOW32/Debug")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binOW32/Debug")
+	set(LINK_FLAGS_DEBUG "${LINK_FLAGS_DEBUG} debug all")	
+#	set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -llibstdc++")	
+elseif(${CMAKE_BUILD_TYPE} MATCHES Release)
+    message("Release Build")
+	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -dNDEBUG")
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binOW32/Release")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binOW32/Release")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binOW32/Release")
+	set(LINK_FLAGS_RELEASE "${LINK_FLAGS_RELEASE} ")
+#	set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -llibstdc++")	
+endif()
+
+project(dlg_two)
+add_executable(dlg_two dlg_two.c dlg_two.rc)
+
+if(CMAKE_SYSTEM_NAME MATCHES "CYGWIN")
+	message("cygwin variable: ${CYGWIN}")
+endif()
+
+target_link_directories(dlg_two PUBLIC "C:/WATCOM//lib386/nt")
+target_link_libraries(dlg_two PUBLIC "glu32.lib" "opengl32.lib" "user32.lib" "advapi32.lib" "comdlg32.lib" "winmm.lib" "gdi32.lib" "shell32.lib" "kernel32.lib")
+#-------------------------------------------------------------------------------------

@@ -1,0 +1,48 @@
+#-------------------------------------------------------------------------------------
+cmake_minimum_required(VERSION 3.9.1)
+# Toolchain File
+
+# The target of this operating systems is 
+SET(CMAKE_SYSTEM_NAME Windows)
+
+# here is the target environment located
+SET(CMAKE_FIND_ROOT_PATH  "C:/TDM-GCC-32/bin" )
+
+# which compilers to use for C and C++
+SET(CMAKE_C_COMPILER "C:/TDM-GCC-32/bin/gcc.exe" )
+SET(CMAKE_CXX_COMPILER "C:/TDM-GCC-32/bin/g++.exe" )
+SET(CMAKE_RC_COMPILER "C:/TDM-GCC-32/bin/windres.exe" )
+
+message(STATUS "Setting GCC flags to compile and link with TDM 32 bits")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+set(CMAKE_LINK_FLAGS "${CMAKE_LINK_FLAGS} ")
+
+include_directories(BEFORE "C:/TDM-GCC-32/include" )
+
+if(${CMAKE_BUILD_TYPE} MATCHES Debug)
+    message("CMAKE Debug Build for GCC 32 bits included in TDM32")
+	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g -DDEBUG -D_DEBUG")
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binTDMW32/Debug")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binTDMW32/Debug")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binTDMW32/Debug")
+#	set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -llibstdc++")	
+elseif(${CMAKE_BUILD_TYPE} MATCHES Release)
+    message("CMAKE Release Build for GCC 32 bits included in TDM32")
+	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -s -DNDEBUG")
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binTDMW32/Release")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binTDMW32/Release")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binTDMW32/Release")
+#	set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -llibstdc++")	
+endif()
+
+file(GLOB SRC_FILES src/*.c src/*.rc)
+# set(APPLI ${NAME_APPLI})
+
+project(${NAME_APPLI}
+        VERSION 1.0.0
+        LANGUAGES C)
+add_executable(${PROJECT_NAME} WIN32 ${SRC_FILES})
+
+target_link_directories(${PROJECT_NAME} PUBLIC "C:/TDM-GCC-32/lib" )
+target_link_libraries(${PROJECT_NAME} PUBLIC "glu32" "opengl32" "user32" "advapi32" "comdlg32" "winmm" "gdi32" "shell32" "kernel32")
+#-------------------------------------------------------------------------------------

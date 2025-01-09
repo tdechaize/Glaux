@@ -1,0 +1,54 @@
+#-------------------------------------------------------------------------------------
+cmake_minimum_required(VERSION 3.15)
+# Toolchain File
+
+# The target of this operating systems is 
+SET(CMAKE_SYSTEM_NAME Windows)
+
+# here is the target environment located
+SET(CMAKE_FIND_ROOT_PATH "C:/mingw64/bin" )
+
+# which compilers to use for C and C++
+SET(CMAKE_C_COMPILER "C:/mingw64/bin/clang.exe" )
+SET(CMAKE_CXX_COMPILER "C:/mingw64/bin/clang++.exe" )
+SET(CMAKE_RC_COMPILER "C:/mingw64/bin/windres.exe" )
+# SET(CMAKE_CXX_EXTENSIONS ON)
+
+# set(CMAKE_C_COMPILER "cl.exe")
+# set(CMAKE_CXX_COMPILER "cl.exe")
+# set(CMAKE_RC_COMPILER "rc.exe")
+
+message(STATUS "Setting CLANG flags with Mingw64")
+set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -m64 -target x86_64-pc-windows-gnu")
+set(CMAKE_LINK_FLAGS "${CMAKE_LINK_FLAGS} -target x86_64-pc-windows-gnu")  
+
+# set(CMAKE_LINK_FLAGS "${CMAKE_LINK_FLAGS} -nostdlib")
+include_directories(BEFORE "C:/mingw64/x86_64-w64-mingw32/include" )
+
+if(${CMAKE_BUILD_TYPE} MATCHES Debug)
+    message("CMAKE Debug Build for CLANG with Mingw64 packaged Winlibs")
+	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g -DDEBUG -D_DEBUG")
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binCLANGW64/Debug")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binCLANGW64/Debug")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binCLANGW64/Debug")
+#	set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -llibstdc++")	
+elseif(${CMAKE_BUILD_TYPE} MATCHES Release)
+    message("CMAKE Release Build for CLANG with Mingw64 packaged Winlibs")
+	set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -O3 -DNDEBUG")
+	set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binCLANGW64/Release")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binCLANGW64/Release")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binCLANGW64/Release")
+#	set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} -llibstdc++")	
+endif()
+
+file(GLOB SRC_FILES src/*.c src/*.rc)
+# set(APPLI ${NAME_APPLI})
+
+project(${NAME_APPLI}
+        VERSION 1.0.0
+        LANGUAGES C)
+add_executable(${PROJECT_NAME} ${SRC_FILES})
+
+target_link_directories(${PROJECT_NAME} PUBLIC "C:/mingw64/x86_64-w64-mingw64/lib" )
+target_link_libraries(${PROJECT_NAME} PUBLIC "glu32" "opengl32" "user32" "advapi32" "comdlg32" "winmm" "gdi32" "shell32" "kernel32")
+#-------------------------------------------------------------------------------------

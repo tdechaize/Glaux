@@ -1,0 +1,102 @@
+List of files included in GLAUX project :
+
+3D.H
+GLOS.H
+TEAPOT.H
+TK.H
+
+FONT.C
+GLAUX.C
+IMAGE.C
+SHAPES.C
+TEAPOT.C
+TK.C
+TKDIB.C
+TKFONT.C
+TKIMAGE.C
+VECT3D.C
+XFORM.C
+
+To Borland C/C++ v 5.5.1 (last free version available) :
+
+Build the glaux.lib file using the program implib.exe thusly :
+implib glaux.lib glaux.dll
+And copy glaux.h into C:\BCC55\Include\GL subdirectory
+
+To Visual C/C++ v 17. (community edition of VS2022) :
+
+lib /DEF:glaux.def /MACHINE:X86 /SUBSYSTEM:WINDOWS /LTCG /NOLOGO (generate glaux.lib to 32 bits arch)
+lib /DEF:glaux.def /MACHINE:X64 /SUBSYSTEM:WINDOWS /LTCG /NOLOGO (generate glaux.lib to 64 bits arch)
+
+Instead of using .def file just insert pragma comment like this
+
+#pragma comment(linker, "/EXPORT:SomeFunction=_SomeFunction@@@23mangledstuff#@@@@")
+
+Edit: Or even easier: Inside the body of the function use
+
+#pragma comment(linker, "/EXPORT:" __FUNCTION__"=" __FUNCDNAME__)
+
+With Visual Studio 2015 or newer, be sure to add blanks between the double quote and the underscore character. 
+This prevent the compiler from interpreting the code construct as a user-defined literal: 
+
+#pragma comment(linker, "/EXPORT:" __FUNCTION__"=" __FUNCDNAME__)
+
+Le fichier d'export des fonctions de la DLL GLAUX.DLL (ou le fichier de définition des fonctions "exportées") est le suivant :
+
+LIBRARY GLAUX.dll
+EXPORTS
+auxCloseWindow
+auxCreateFont
+auxDIBImageLoadA
+auxDIBImageLoadW
+auxDrawStrA
+auxDrawStrW
+auxExposeFunc
+auxGetColorMapSize
+auxGetDisplayMode
+auxGetDisplayModeID
+auxGetDisplayModePolicy
+auxGetHDC
+auxGetHGLRC
+auxGetHWND
+auxGetMouseLoc
+auxIdleFunc
+auxInitDisplayMode
+auxInitDisplayModeID
+auxInitDisplayModePolicy
+auxInitPosition
+auxKeyFunc
+auxMainLoop
+auxMouseFunc
+auxQuit
+auxRGBImageLoadA
+auxRGBImageLoadW
+auxReshapeFunc
+auxSetFogRamp
+auxSetGreyRamp
+auxSetOneColor
+auxSetRGBMap
+auxSolidBox
+auxSolidCone
+auxSolidCube
+auxSolidCylinder
+auxSolidDodecahedron
+auxSolidIcosahedron
+auxSolidOctahedron
+auxSolidSphere
+auxSolidTeapot
+auxSolidTetrahedron
+auxSolidTorus
+auxSwapBuffers
+auxWireBox
+auxWireCone
+auxWireCube
+auxWireCylinder
+auxWireDodecahedron
+auxWireIcosahedron
+auxWireOctahedron
+auxWireSphere
+auxWireTeapot
+auxWireTetrahedron
+auxWireTorus
+ 

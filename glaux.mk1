@@ -1,0 +1,90 @@
+!define BLANK ""
+C:\src\OpenGL\Glaux\FONT.obj : C:\src\OpenGL\Glaux\FONT.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 FONT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd&
+ -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\GLAUX.obj : C:\src\OpenGL\Glaux\GLAUX.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 GLAUX.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\IMAGE.obj : C:\src\OpenGL\Glaux\IMAGE.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 IMAGE.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\SHAPES.obj : C:\src\OpenGL\Glaux\SHAPES.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 SHAPES.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TEAPOT.obj : C:\src\OpenGL\Glaux\TEAPOT.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TEAPOT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TK.obj : C:\src\OpenGL\Glaux\TK.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TK.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -&
+6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TKDIB.obj : C:\src\OpenGL\Glaux\TKDIB.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TKDIB.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TKFONT.obj : C:\src\OpenGL\Glaux\TKFONT.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TKFONT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TKIMAGE.obj : C:\src\OpenGL\Glaux\TKIMAGE.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TKIMAGE.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 &
+-bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\VECT3D.obj : C:\src\OpenGL\Glaux\VECT3D.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 VECT3D.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\XFORM.obj : C:\src\OpenGL\Glaux\XFORM.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 XFORM.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\glaux.dll : C:\src\OpenGL\Glaux\FONT.obj C:\src\OpenGL\G&
+laux\GLAUX.obj C:\src\OpenGL\Glaux\IMAGE.obj C:\src\OpenGL\Glaux\SHAPES.obj &
+C:\src\OpenGL\Glaux\TEAPOT.obj C:\src\OpenGL\Glaux\TK.obj C:\src\OpenGL\Glau&
+x\TKDIB.obj C:\src\OpenGL\Glaux\TKFONT.obj C:\src\OpenGL\Glaux\TKIMAGE.obj C&
+:\src\OpenGL\Glaux\VECT3D.obj C:\src\OpenGL\Glaux\XFORM.obj C:\src\OpenGL\Gl&
+aux\3D.H C:\src\OpenGL\Glaux\glaux.h C:\src\OpenGL\Glaux\GLOS.H C:\src\OpenG&
+L\Glaux\TEAPOT.H C:\src\OpenGL\Glaux\TK.H .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ @%write glaux.lk1 FIL FONT.obj,GLAUX.obj,IMAGE.obj,SHAPES.obj,TEAPOT.obj,TK&
+.obj,TKDIB.obj,TKFONT.obj,TKIMAGE.obj,VECT3D.obj,XFORM.obj
+ @%append glaux.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b glaux.imp 
+ @%append glaux.lk1 LIBR glaux.imp
+!endif
+!ifneq BLANK ""
+ @%append glaux.lk1 
+!endif
+ *wlink name glaux sys nt_dll op m libp C:\WATCOM/lib386/nt" libr opengl32 l&
+ibr glu32 op maxe=25 op q op symf @glaux.lk1
+ *wlib -q -n -b glaux.lib +glaux.dll
+

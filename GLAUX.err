@@ -1,0 +1,5 @@
+src\GLAUX.C(85): Warning! W303: Parameter 'lpvReserved' has been defined, but not referenced
+src\GLAUX.C(85): Warning! W303: Parameter 'hinstDLL' has been defined, but not referenced
+src\GLAUX.C(128): Warning! W303: Parameter 'w' has been defined, but not referenced
+src\GLAUX.C(128): Warning! W303: Parameter 'h' has been defined, but not referenced
+src\GLAUX.C(240): Warning! W303: Parameter 'status' has been defined, but not referenced

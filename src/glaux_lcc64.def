@@ -1,0 +1,60 @@
+EXPORTS
+  _auxCloseWindow=auxCloseWindow
+  _auxCreateFont=auxCreateFont
+  _auxDIBImageLoadA=auxDIBImageLoadA
+  _auxDIBImageLoadW=auxDIBImageLoadW
+  _auxDrawStrA=auxDrawStrA
+  _auxDrawStrW=auxDrawStrW
+  _auxExposeFunc=auxExposeFunc
+  _auxGetColorMapSize=auxGetColorMapSize
+  _auxGetDisplayMode=auxGetDisplayMode
+  _auxGetDisplayModeID=auxGetDisplayModeID
+  _auxGetDisplayModePolicy=auxGetDisplayModePolicy
+  _auxGetHDC=auxGetHDC
+  _auxGetHGLRC=auxGetHGLRC
+  _auxGetHWND=auxGetHWND
+  _auxGetMouseLoc=auxGetMouseLoc
+  _auxIdleFunc=auxIdleFunc
+  _auxInitDisplayMode=auxInitDisplayMode
+  _auxInitDisplayModeID=auxInitDisplayModeID
+  _auxInitDisplayModePolicy=auxInitDisplayModePolicy
+  _auxInitPosition=auxInitPosition
+  _auxKeyFunc=auxKeyFunc
+  _auxMainLoop=auxMainLoop
+  _auxMouseFunc=auxMouseFunc
+  _auxQuit=auxQuit
+  _auxRGBImageLoadA=auxRGBImageLoadA
+  _auxRGBImageLoadW=auxRGBImageLoadW
+  _auxReshapeFunc=auxReshapeFunc
+  _auxSetFogRamp=auxSetFogRamp
+  _auxSetGreyRamp=auxSetGreyRamp
+  _auxSetOneColor=auxSetOneColor
+  _auxSetRGBMap=auxSetRGBMap
+  _auxSolidBox=auxSolidBox
+  _auxSolidCone=auxSolidCone
+  _auxSolidCube=auxSolidCube
+  _auxSolidCylinder=auxSolidCylinder
+  _auxSolidDodecahedron=auxSolidDodecahedron
+  _auxSolidIcosahedron=auxSolidIcosahedron
+  _auxSolidOctahedron=auxSolidOctahedron
+  _auxSolidSphere=auxSolidSphere
+  _auxSolidTeapot=auxSolidTeapot
+  _auxSolidTetrahedron=auxSolidTetrahedron
+  _auxSolidTorus=auxSolidTorus
+  _auxSwapBuffers=auxSwapBuffers
+  _auxWireBox=auxWireBox
+  _auxWireCone=auxWireCone
+  _auxWireCube=auxWireCube
+  _auxWireCylinder=auxWireCylinder
+  _auxWireDodecahedron=auxWireDodecahedron
+  _auxWireIcosahedron=auxWireIcosahedron
+  _auxWireOctahedron=auxWireOctahedron
+  _auxWireSphere=auxWireSphere
+  _auxWireTeapot=auxWireTeapot
+  _auxWireTetrahedron=auxWireTetrahedron
+  _auxWireTorus=auxWireTorus
+  _LibMain=LibMain
+
+
+
+

@@ -1,0 +1,151 @@
+cd C:\src\OpenGL\Glaux
+#           options wmake : -h (don't print include file)  -e (exclude bad target, very dangerous !)
+wmake -f C:\src\OpenGL\Glaux\glaux.mk -h -e
+#   		options wcc386 : -w4 (warning level 4) -e25 (stop after 25 errors) -zq (operate quietly)
+#								 -otexan (tuning of optimisations) -d1 (equivalent to #define l)
+#								 -bd (target is dll) -6r (Pentium Pro register calling conventions)
+#								 -bt=nt (build for Win32s/WINNT ...) -fo=.obj (name of object target)
+#								 -mf (memory model, here is "flat", another options are -ml : large model)
+wcc386 FONT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 GLAUX.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+GLAUX.C(86): Warning! W303: Parameter 'w' has been defined, but not referenced
+GLAUX.C(86): Warning! W303: Parameter 'h' has been defined, but not referenced
+GLAUX.C(198): Warning! W303: Parameter 'status' has been defined, but not referenced
+wcc386 IMAGE.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 SHAPES.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 TEAPOT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 TK.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+TK.C(1015): Warning! W303: Parameter 'Size' has been defined, but not referenced
+TK.C(1015): Warning! W303: Parameter 'Values' has been defined, but not referenced
+TK.C(2287): Warning! W136: Comparison equivalent to 'unsigned == 0'
+TK.C(2298): Warning! W136: Comparison equivalent to 'unsigned == 0'
+TK.C(2300): Warning! W136: Comparison equivalent to 'unsigned == 0'
+TK.C(2312): Warning! W136: Comparison equivalent to 'unsigned == 0'
+TK.C(2323): Warning! W136: Comparison equivalent to 'unsigned == 0'
+wcc386 TKDIB.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 TKFONT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 TKIMAGE.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+TKIMAGE.C(142): Warning! W1180: Sign specifier mismatch
+TKIMAGE.C(142): Note! N2003: source conversion type is 'long *'
+TKIMAGE.C(142): Note! N2004: target conversion type is 'unsigned long *'
+wcc386 VECT3D.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+wcc386 XFORM.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -6r -bt=nt -fo=.obj -mf
+# 			options wlink : name xxx (name of output file) sys xxx (here nt_dll) op m (option map file)
+#							libp xxxxx (path of libraries) libr (or "l" simply) xxxxx (name of library used) 
+#							op maxe=25 (option max error) op q (option quiet) op symf (option symbol files) 
+wlink name glaux sys nt_dll op m libp C:\WATCOM/lib386/nt" libr opengl32 libr glu32 op maxe=25 op q op symf @glaux.lk1
+# 			options wlib : -q (quiet mode) -n (always create library) -b (don't create bak file) 
+# 							Use this tool to construct import library from dll.
+# 							Another manner to construct import library during linkage is use of option : op impl=glaux
+wlib -q -n -b glaux.lib +glaux.dll
+Execution complete
+
+Source file glaux.mk :
+
+-----------------------------------------------------------------------------------
+project : C:\src\OpenGL\Glaux\glaux.dll .SYMBOLIC
+
+!include C:\src\OpenGL\Glaux\glaux.mk1
+-----------------------------------------------------------------------------------
+
+Source file glaux.mk1 :
+
+-----------------------------------------------------------------------------------
+!define BLANK ""
+C:\src\OpenGL\Glaux\FONT.obj : C:\src\OpenGL\Glaux\FONT.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 FONT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd&
+ -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\GLAUX.obj : C:\src\OpenGL\Glaux\GLAUX.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 GLAUX.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\IMAGE.obj : C:\src\OpenGL\Glaux\IMAGE.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 IMAGE.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\SHAPES.obj : C:\src\OpenGL\Glaux\SHAPES.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 SHAPES.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TEAPOT.obj : C:\src\OpenGL\Glaux\TEAPOT.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TEAPOT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TK.obj : C:\src\OpenGL\Glaux\TK.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TK.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -bd -&
+6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TKDIB.obj : C:\src\OpenGL\Glaux\TKDIB.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TKDIB.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TKFONT.obj : C:\src\OpenGL\Glaux\TKFONT.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TKFONT.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\TKIMAGE.obj : C:\src\OpenGL\Glaux\TKIMAGE.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 TKIMAGE.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 &
+-bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\VECT3D.obj : C:\src\OpenGL\Glaux\VECT3D.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 VECT3D.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -&
+bd -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\XFORM.obj : C:\src\OpenGL\Glaux\XFORM.C .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ *wcc386 XFORM.C -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -zq -otexan -d1 -b&
+d -6r -bt=nt -fo=.obj -mf
+
+C:\src\OpenGL\Glaux\glaux.dll : C:\src\OpenGL\Glaux\FONT.obj C:\src\OpenGL\G&
+laux\GLAUX.obj C:\src\OpenGL\Glaux\IMAGE.obj C:\src\OpenGL\Glaux\SHAPES.obj &
+C:\src\OpenGL\Glaux\TEAPOT.obj C:\src\OpenGL\Glaux\TK.obj C:\src\OpenGL\Glau&
+x\TKDIB.obj C:\src\OpenGL\Glaux\TKFONT.obj C:\src\OpenGL\Glaux\TKIMAGE.obj C&
+:\src\OpenGL\Glaux\VECT3D.obj C:\src\OpenGL\Glaux\XFORM.obj C:\src\OpenGL\Gl&
+aux\3D.H C:\src\OpenGL\Glaux\glaux.h C:\src\OpenGL\Glaux\GLOS.H C:\src\OpenG&
+L\Glaux\TEAPOT.H C:\src\OpenGL\Glaux\TK.H .AUTODEPEND
+ @C:
+ cd C:\src\OpenGL\Glaux
+ @%write glaux.lk1 FIL FONT.obj,GLAUX.obj,IMAGE.obj,SHAPES.obj,TEAPOT.obj,TK&
+.obj,TKDIB.obj,TKFONT.obj,TKIMAGE.obj,VECT3D.obj,XFORM.obj
+ @%append glaux.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b glaux.imp 
+ @%append glaux.lk1 LIBR glaux.imp
+!endif
+!ifneq BLANK ""
+ @%append glaux.lk1 
+!endif
+ *wlink name glaux sys nt_dll op m libp C:\WATCOM/lib386/nt" libr opengl32 l&
+ibr glu32 op maxe=25 op q op symf @glaux.lk1
+ *wlib -q -n -b glaux.lib +glaux.dll
+-----------------------------------------------------------------------------------
+
+Source file glaux.lk1 :
+
+-----------------------------------------------------------------------------------
+FIL FONT.obj,GLAUX.obj,IMAGE.obj,SHAPES.obj,TEAPOT.obj,TK.obj,TKDIB.obj,TKFONT.obj,TKIMAGE.obj,VECT3D.obj,XFORM.obj
+-----------------------------------------------------------------------------------
+
+

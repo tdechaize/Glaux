@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{27f4feed-ea3e-4fdd-a0b4-3801864a557e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;f90;for;f;fpp</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d81abb34-1202-4804-8e52-8b9abac4a871}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FONT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLAUX.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IMAGE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SHAPES.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TEAPOT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TK.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TKDIB.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TKFONT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TKIMAGE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VECT3D.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XFORM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3D.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glaux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLOS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TEAPOT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TK.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

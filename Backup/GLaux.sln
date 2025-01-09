@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GLaux", "GLaux.vcproj", "{7C227BD1-32C2-4036-BA6B-29050E1A5636}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Multithreaded DLL|Win32 = Debug Multithreaded DLL|Win32
+		Debug Multithreaded|Win32 = Debug Multithreaded|Win32
+		Debug|Win32 = Debug|Win32
+		Release Multithreaded DLL|Win32 = Release Multithreaded DLL|Win32
+		Release Multithreaded|Win32 = Release Multithreaded|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Debug Multithreaded DLL|Win32.ActiveCfg = Debug Multithreaded DLL|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Debug Multithreaded DLL|Win32.Build.0 = Debug Multithreaded DLL|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Debug Multithreaded|Win32.Build.0 = Debug Multithreaded|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Debug|Win32.Build.0 = Debug|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Release Multithreaded DLL|Win32.ActiveCfg = Release Multithreaded DLL|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Release Multithreaded DLL|Win32.Build.0 = Release Multithreaded DLL|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Release Multithreaded|Win32.Build.0 = Release Multithreaded|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Release|Win32.ActiveCfg = Release|Win32
+		{7C227BD1-32C2-4036-BA6B-29050E1A5636}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

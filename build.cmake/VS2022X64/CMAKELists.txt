@@ -1,0 +1,41 @@
+#-------------------------------------------------------------------------------------	  
+cmake_minimum_required(VERSION 3.10)
+# Toolchain File
+
+# The target of this operating systems is 
+SET(CMAKE_SYSTEM_NAME Windows)
+
+# here is the target environment located
+SET(CMAKE_FIND_ROOT_PATH  "C:/Program Files/Microsoft Visual Studio/$ENV{VS_VERSION}/Community/VC/Tools/MSVC/$ENV{VS_NUM}/bin/Hostx64/x64" )
+
+# which compilers to use for C and C++
+SET(CMAKE_C_COMPILER "C:/Program Files/Microsoft Visual Studio/$ENV{VS_VERSION}/Community/VC/Tools/MSVC/$ENV{VS_NUM}/bin/Hostx64/x64/cl.exe" )
+SET(CMAKE_CXX_COMPILER "C:/Program Files/Microsoft Visual Studio/$ENV{VS_VERSION}/Community/VC/Tools/MSVC/$ENV{VS_NUM}/bin/Hostx64/x64/cl.exe" )
+SET(CMAKE_RC_COMPILER "C:/Program Files (x86)/Windows Kits/$ENV{KIT_WIN_VERSION}/bin/$ENV{KIT_WIN_NUM}/x64/rc.exe" )
+# SET(CMAKE_CXX_EXTENSIONS ON)
+
+# set(CMAKE_C_COMPILER "cl.exe")
+# set(CMAKE_CXX_COMPILER "cl.exe")
+# SET(CMAKE_RC_COMPILER "rc.exe")
+
+message("Setting MSVC flags Visual C/C++ 64 bits (VS2022 Community)")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /TC")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /TP /std:c++latest")
+# set(CMAKE_LINK_FLAGS "${CMAKE_LINK_FLAGS} ")
+# include_directories(BEFORE "C:/Program Files (x86)/Windows Kits/$ENV{KIT_WIN_VERSION}/Include/$ENV{KIT_WIN_NUM}/um")
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binVS2022X64")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binVS2022X64")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/binVS2022X64")
+
+file(GLOB SRC_FILES src/*.c src/*.rc)
+# set(APPLI ${NAME_APPLI})
+
+project(${NAME_APPLI}
+        VERSION 1.0.0
+        LANGUAGES C)
+add_executable(${PROJECT_NAME} WIN32 ${SRC_FILES})
+
+# target_link_directories(${PROJECT_NAME} PUBLIC "C:/Program Files (x86)/Windows Kits/$ENV{KIT_WIN_VERSION}/Lib/$ENV{KIT_WIN_NUM}/um/x64")
+target_link_libraries(${PROJECT_NAME} PUBLIC "glu32.lib" "opengl32.lib" "user32.lib" "advapi32.lib" "comdlg32.lib" "winmm.lib" "gdi32.lib" "shell32.lib" "kernel32.lib")
+#-------------------------------------------------------------------------------------

@@ -1,0 +1,2068 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GLaux" />
+		<Option makefile="MAKEFILE" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc-mingw32" />
+		<Build>
+			<Target title="Win32 Release">
+				<Option output="binVS2022X32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X32/Release" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/TC" />
+					<Add option="/O2" />
+					<Add option="/W3" />
+					<Add option="/EHsc" />
+					<Add option="/FD" />
+					<Add option="/FS" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win32 Debug">
+				<Option output="binVS2022X32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X32/Debug" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/TC" />
+					<Add option="/Wall" />
+					<Add option="/Zi" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win32 Debug Multithreaded DLL">
+				<Option output="binVS2022X32/DebugMD/GLaux" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lib" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="objVS2022X32/DebugMD" />
+				<Option object_output="objVS2022X32/DebugMD" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_2022" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/MDd" />
+					<Add option="/TC" />
+					<Add option="/Wall" />
+					<Add option="/Zi" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cl" />
+					<Add after="dumpbin /EXPORTS binVS2022X32/DebugMD/GLaux.dll" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Win32 Debug Multithreaded">
+				<Option output="binVS2022X32/DebugM/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X32/DebugM" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/MTd" />
+					<Add option="/TC" />
+					<Add option="/Wall" />
+					<Add option="/Zi" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win32 Release Multithreaded DLL">
+				<Option output="binVS2022X32/ReleaseMD/GLaux" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lib" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="objVS2022X32/ReleaseMD" />
+				<Option object_output="objVS2022X32/ReleaseMD" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_2022" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/TC" />
+					<Add option="/O2" />
+					<Add option="/W3" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cl" />
+					<Add after="dumpbin /EXPORTS binVS2022X32/ReleaseMD/GLaux.dll" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Win32 Release Multithreaded">
+				<Option output="binVS2022X32/ReleaseM/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X32/ReleaseM" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MT" />
+					<Add option="/TC" />
+					<Add option="/O2" />
+					<Add option="/W3" />
+					<Add option="/EHsc" />
+					<Add option="/FD" />
+					<Add option="/FS" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win64 Release">
+				<Option output="binVS2022X64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X64/Release" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022_x64" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/TC" />
+					<Add option="/O2" />
+					<Add option="/W3" />
+					<Add option="/EHsc" />
+					<Add option="/FD" />
+					<Add option="/FS" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win64 Debug">
+				<Option output="binVS2022X64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X64/Debug" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022_x64" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/TC" />
+					<Add option="/Wall" />
+					<Add option="/Zi" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win64 Debug Multithreaded DLL">
+				<Option output="binVS2022X64/DebugMD/GLaux" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lib" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="objVS2022X64/DebugMD" />
+				<Option object_output="objVS2022X64/DebugMD" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_2022_x64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/MDd" />
+					<Add option="/TC" />
+					<Add option="/Wall" />
+					<Add option="/Zi" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add option="/MACHINE:X64" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cl" />
+					<Add after="dumpbin /EXPORTS binVS2022X64/DebugMD/GLaux.dll" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Win64 Debug Multithreaded">
+				<Option output="binVS2022X64/DebugM/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X64/DebugM" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022_x64" />
+				<Option createDefFile="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/MTd" />
+					<Add option="/TC" />
+					<Add option="/Wall" />
+					<Add option="/Zi" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Win64 Release Multithreaded DLL">
+				<Option output="binVS2022X64/ReleaseMD/GLaux" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lib" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="objVS2022X64/ReleaseMD" />
+				<Option object_output="objVS2022X64/ReleaseMD" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_2022_x64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/TC" />
+					<Add option="/O2" />
+					<Add option="/W3" />
+					<Add option="/EHsc" />
+					<Add option="/FS" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/MACHINE:X64" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="shell32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cl" />
+					<Add after="dumpbin /EXPORTS binVS2022X64/ReleaseMD/GLaux.dll" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Win64 Release Multithreaded">
+				<Option output="binVS2022X64/ReleaseM/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="objVS2022X64/ReleaseM" />
+				<Option type="2" />
+				<Option compiler="microsoft_visual_c_2022_x64" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="/MT" />
+					<Add option="/TC" />
+					<Add option="/O2" />
+					<Add option="/W3" />
+					<Add option="/EHsc" />
+					<Add option="/FD" />
+					<Add option="/FS" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_LIB" />
+				</Compiler>
+			</Target>
+			<Target title="Debug Mingw32 official">
+				<Option platforms="Windows;" />
+				<Option output="binMingW32of/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingW32of/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMingw32of/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMingw32of\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Mingw32 official">
+				<Option platforms="Windows;" />
+				<Option output="binMingw32of/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingw32of/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMingw32of/Release/GLaux.dll" />
+					<Add after="cmd /c type binMingw32of\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Mingw64 CB">
+				<Option platforms="Windows;" />
+				<Option output="binMingW64CB/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingW64CB/Debug/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_compiler_cb" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMingw64CB/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMingw64CB\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Mingw64 CB">
+				<Option platforms="Windows;" />
+				<Option output="binMingw64CB/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingw64CB/Release/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_compiler_cb" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMingw64CB/Release/GLaux.dll" />
+					<Add after="cmd /c type binMingw64CB\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Mingw64 Dev-Cpp">
+				<Option platforms="Windows;" />
+				<Option output="binDevCpp/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objDevCpp/Debug/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_compiler_dev" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binDevCpp/Debug/GLaux.dll" />
+					<Add after="cmd /c type binDevCpp\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Mingw64 Dev-Cpp">
+				<Option platforms="Windows;" />
+				<Option output="binDevCpp/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objDevCpp/Release/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_compiler_dev" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binDevCpp/Release/GLaux.dll" />
+					<Add after="cmd /c type binDevCpp\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CYGWIN 32">
+				<Option platforms="Windows;" />
+				<Option output="binCYGWIN32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCYGWIN32/Debug" />
+				<Option type="3" />
+				<Option compiler="cygwin_gcc_32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-mwindows" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="i686-w64-mingw32-gcc.exe --version" />
+					<Add after="file binCYGWIN32/Debug/GLaux.dll" />
+					<Add after="cmd /c type binCYGWIN32\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CYGWIN 32">
+				<Option platforms="Windows;" />
+				<Option output="binCYGWIN32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCYGWIN32/Release/" />
+				<Option type="3" />
+				<Option compiler="cygwin_gcc_32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-mwindows" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="i686-w64-mingw32-gcc.exe --version" />
+					<Add after="file binCYGWIN32/Release/GLaux.dll" />
+					<Add after="cmd /c type binCYGWIN32\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CYGWIN 64">
+				<Option platforms="Windows;" />
+				<Option output="binCYGWIN64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCYGWIN64/Debug" />
+				<Option type="3" />
+				<Option compiler="cygwin" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-mwindows" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="x86_64-w64-mingw32-gcc.exe --version" />
+					<Add after="file binCYGWIN64/Debug/GLaux.dll" />
+					<Add after="cmd /c type binCYGWIN64\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CYGWIN 64">
+				<Option platforms="Windows;" />
+				<Option output="binCYGWIN64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCYGWIN64/Release/" />
+				<Option type="3" />
+				<Option compiler="Cygwin_natif_GCC_64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-mwindows" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="x86_64-w64-mingw32-gcc.exe --version" />
+					<Add after="file binCYGWIN64/Release/GLaux.dll" />
+					<Add after="cmd /c type binCYGWIN64\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CYGWIN N64">
+				<Option platforms="Windows;" />
+				<Option output="binCYGWINN64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCYGWINN64/Debug" />
+				<Option type="3" />
+				<Option compiler="Cygwin_natif_GCC_64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-mwindows" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binCYGWINN64/Debug/GLaux.dll" />
+					<Add after="cmd /c type binCYGWINN64\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CYGWIN N64">
+				<Option platforms="Windows;" />
+				<Option output="binCYGWINN64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCYGWINN64/Release/" />
+				<Option type="3" />
+				<Option compiler="Cygwin_natif_GCC_64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-mwindows" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binCYGWINN64/Release/GLaux.dll" />
+					<Add after="cmd /c type binCYGWINN64\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Mingw32 wl">
+				<Option platforms="Windows;" />
+				<Option output="binMingw32wl/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingw32wl/Debug/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_mingw32_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="i686-w64-mingw32-gcc.exe --version" />
+					<Add after="file binMingw32wl/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMingw32wl\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Mingw32 wl">
+				<Option platforms="Windows;" />
+				<Option output="binMingw32wl/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingw32wl/Release/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_mingw32_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="i686-w64-mingw32-gcc.exe --version" />
+					<Add after="file binMingw32wl/Release/GLaux.dll" />
+					<Add after="cmd /c type binMingw32wl\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Mingw64 wl">
+				<Option platforms="Windows;" />
+				<Option output="binMingw64wl/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingw64wl/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc-mingw64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="x86_64-w64-mingw32-gcc.exe --version" />
+					<Add after="file binMingw64wl/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMingw64wl\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Mingw64 wl">
+				<Option platforms="Windows;" />
+				<Option output="binMingw64wl/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMingw64wl/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc-mingw64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="x86_64-w64-mingw32-gcc.exe --version" />
+					<Add after="file binMingw64wl/Release/GLaux.dll" />
+					<Add after="cmd /c type binMingw64wl\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug TDM MinGW32">
+				<Option platforms="Windows;" />
+				<Option output="binTDMW32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objTDMW32/Debug" />
+				<Option type="3" />
+				<Option compiler="tdm_gcc_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binTDMW32/Debug/GLaux.dll" />
+					<Add after="cmd /c type binTDMW32\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release TDM MinGW32">
+				<Option platforms="Windows;" />
+				<Option output="binTDMW32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objTDMW32/Release" />
+				<Option type="3" />
+				<Option compiler="tdm_gcc_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binTDMW32/Release/GLaux.dll" />
+					<Add after="cmd /c type binTDMW32\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug TDM MinGW64">
+				<Option platforms="Windows;" />
+				<Option output="binTDMW64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objTDMW64/Debug" />
+				<Option type="3" />
+				<Option compiler="tdm_gcc_x64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binTDMW64/Debug/GLaux.dll" />
+					<Add after="cmd /c type binTDMW64\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release TDM MinGW64">
+				<Option platforms="Windows;" />
+				<Option output="binTDMW64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objTDMW64/Release" />
+				<Option type="3" />
+				<Option compiler="tdm_gcc_x64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binTDMW64/Release/GLaux.dll" />
+					<Add after="cmd /c type binTDMW64\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug MSYS2W32">
+				<Option platforms="Windows;" />
+				<Option output="binMSYS2W32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMSYS2W32/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc-msys2-mingw32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMSYS2W32/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMSYS2W32\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release MSYS2W32">
+				<Option platforms="Windows;" />
+				<Option output="binMSYS2W32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMSYS2W32/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc-msys2-mingw32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMSYS2W32/Release/GLaux.dll" />
+					<Add after="cmd /c type binMSYS2W32\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug MSYS2W64">
+				<Option platforms="Windows;" />
+				<Option output="binMSYS2W64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMSYS2W64/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc-msys2-mingw64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMSYS2W64/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMSYS2W64\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release MSYS2W64">
+				<Option platforms="Windows;" />
+				<Option output="binMSYS2W64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMSYS2W64/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc-msys2-mingw64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMSYS2W64/Release/GLaux.dll" />
+					<Add after="cmd /c type binMSYS2W64\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug MSYS2 UCRT64">
+				<Option platforms="Windows;" />
+				<Option output="binMSYS2U64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMSYS2U64/Debug/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_msys_ucrt64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMSYS2U64/Debug/GLaux.dll" />
+					<Add after="cmd /c type binMSYS2U64\Debug\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release MSYS2 UCRT64">
+				<Option platforms="Windows;" />
+				<Option output="binMSYS2U64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objMSYS2U64/Release/" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_msys_ucrt64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="gcc.exe --version" />
+					<Add after="file binMSYS2WU4/Release/GLaux.dll" />
+					<Add after="cmd /c type binMSYS2U64\Release\libGLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CLANG Mingw32">
+				<Option output="binCLANGW32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGW32/Debug/" />
+				<Option type="3" />
+				<Option compiler="llvm_clang_compiler_w32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ggdb" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CLANG Mingw32">
+				<Option output="binCLANGW32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGW32/release/" />
+				<Option type="3" />
+				<Option compiler="llvm_clang_compiler_w32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CLANG Mingw64">
+				<Option platforms="Windows;" />
+				<Option output="binCLANGW64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGW64/Debug/" />
+				<Option type="3" />
+				<Option compiler="clang" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-ggdb" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CLANG Mingw64">
+				<Option platforms="Windows;" />
+				<Option output="binCLANGW64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGW64/Release/" />
+				<Option type="3" />
+				<Option compiler="clang" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CLANG MSX32">
+				<Option platforms="Windows;" />
+				<Option output="binCLANGX32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGX32/Debug/" />
+				<Option type="3" />
+				<Option compiler="llvm_clang_compiler_x32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add option="/FO objCLANGX32\Debug\GLaux.res" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CLANG MSX32">
+				<Option platforms="Windows;" />
+				<Option output="binCLANGX32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGX32/Release/" />
+				<Option type="3" />
+				<Option compiler="llvm_clang_compiler_x32" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CLANG MSX64">
+				<Option platforms="Windows;" />
+				<Option output="binCLANGX64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGX64/Debug/" />
+				<Option type="3" />
+				<Option compiler="llvm_clang_compiler_x64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CLANG MSX64">
+				<Option platforms="Windows;" />
+				<Option output="binCLANGX64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGX64/Release/" />
+				<Option type="3" />
+				<Option compiler="llvm_clang_compiler_x64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CLANG MSYS W32">
+				<Option output="binCLANGMW32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGMW32/Debug/" />
+				<Option type="3" />
+				<Option compiler="clang_msys_w32_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CLANG MSYS W32">
+				<Option output="binCLANGMW32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGMW32/release/" />
+				<Option type="3" />
+				<Option compiler="clang_msys_w32_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug CLANG MSYS W64">
+				<Option output="binCLANGMW64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGMW64/Debug/" />
+				<Option type="3" />
+				<Option compiler="clang_msys_w64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-x c" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release CLANG MSYS W64">
+				<Option output="binCLANGMW64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objCLANGMW64/release/" />
+				<Option type="3" />
+				<Option compiler="clang_msys_w64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-x c" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="libglu32" />
+					<Add library="libopengl32" />
+					<Add library="libadvapi32" />
+					<Add library="libcomdlg32" />
+					<Add library="libgdi32" />
+					<Add library="libwinmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="clang.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Intel X32">
+				<Option output="binINTELX32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objINTELX32/Debug" />
+				<Option type="3" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="/Zi" />
+					<Add option="/TC" />
+					<Add option="/nolibsycl" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="icx.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Intel X32">
+				<Option output="binINTELX32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objINTELX32/Release" />
+				<Option type="3" />
+				<Option compiler="icc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="/TC" />
+					<Add option="/nolibsycl" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="icx.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug Intel X64">
+				<Option output="binINTELX64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objINTELX64/Debug" />
+				<Option type="3" />
+				<Option compiler="intel_cc_compiler_64_bits" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="/Zi" />
+					<Add option="/TC" />
+					<Add option="/nolibsycl" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="icx.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Intel X64">
+				<Option output="binINTELX64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objINTELX64/Release" />
+				<Option type="3" />
+				<Option compiler="intel_cc_compiler_64_bits" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="/TC" />
+					<Add option="/nolibsycl" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="user32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="gdi32" />
+					<Add library="shell32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="icx.exe --version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug DMC">
+				<Option platforms="Windows;" />
+				<Option output="binDMC/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objDMC/Debug" />
+				<Option type="3" />
+				<Option compiler="dmc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-WD" />
+					<Add option="-g" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+					<Add directory="C:/dm/include/gl" />
+				</Compiler>
+				<Linker>
+					<Add option="/IMPL:binDMC\Debug\glaux.lib" />
+					<Add option="/DEBUG" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+					<Add library="advapi32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c dmc | grep Version" />
+					<Add after="libunres -p binDMC\Debug\glaux.lib" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release DMC">
+				<Option platforms="Windows;" />
+				<Option output="binDMC/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objDMC/Release/" />
+				<Option type="3" />
+				<Option compiler="dmc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-WD" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+					<Add directory="C:/dm/include/gl" />
+				</Compiler>
+				<Linker>
+					<Add option="/IMPL:binDMC\Release\glaux.lib" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+					<Add library="advapi32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c dmc | grep Version" />
+					<Add after="libunres -p binDMC\Release\glaux.lib" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug lcc">
+				<Option platforms="Windows;" />
+				<Option output="binlcc32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objlcc32/Debug" />
+				<Option type="3" />
+				<Option compiler="lcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-A" />
+					<Add option="-g2" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-entry LibMain" />
+					<Add option="-nounderscores" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="lcc.exe -v" />
+					<Add after="lcclib binlcc32\Debug\GLaux.lib objlcc32\Debug\src\FONT.obj objlcc32\Debug\src\GLAUX.obj objlcc32\Debug\src\IMAGE.obj objlcc32\Debug\src\SHAPES.obj objlcc32\Debug\src\TEAPOT.obj objlcc32\Debug\src\TK.obj objlcc32\Debug\src\TKDIB.obj objlcc32\Debug\src\TKFONT.obj objlcc32\Debug\src\TKIMAGE.obj objlcc32\Debug\src\VECT3D.obj objlcc32\Debug\src\XFORM.obj" />
+					<Add after="pedump /EXP binlcc32\Debug\GLaux.dll" />
+					<Add after="pedump /EXP binlcc32\Debug\GLaux.lib" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release lcc">
+				<Option platforms="Windows;" />
+				<Option output="binlcc32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objlcc32/Release/" />
+				<Option type="3" />
+				<Option compiler="lcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-A" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-entry LibMain" />
+					<Add option="-nounderscores" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="lcc.exe -v" />
+					<Add after="lcclib binlcc32\Release\GLaux.lib objlcc32\Release\src\FONT.obj objlcc32\Release\src\GLAUX.obj objlcc32\Release\src\IMAGE.obj objlcc32\Release\src\SHAPES.obj objlcc32\Release\src\TEAPOT.obj objlcc32\Release\src\TK.obj objlcc32\Release\src\TKDIB.obj objlcc32\Release\src\TKFONT.obj objlcc32\Release\src\TKIMAGE.obj objlcc32\Release\src\VECT3D.obj objlcc32\Release\src\XFORM.obj" />
+					<Add after="pedump /EXP binlcc32\Release\GLaux.dll" />
+					<Add after="pedump /EXP binlcc32\Release\GLaux.lib" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug lcc64">
+				<Option platforms="Windows;" />
+				<Option output="binlcc64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objlcc64/Debug" />
+				<Option type="3" />
+				<Option compiler="lcc_compiler_64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-A" />
+					<Add option="-g2" />
+					<Add option="-D_WIN64" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="lcc64.exe -v" />
+					<Add after="pedump /EXP binlcc64\Debug\GLaux.dll" />
+					<Add after="pedump /EXP binlcc64\Debug\GLaux.lib" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release lcc64">
+				<Option platforms="Windows;" />
+				<Option output="binlcc64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objlcc64/Release/" />
+				<Option type="3" />
+				<Option compiler="lcc_compiler_64" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Option projectCompilerOptionsRelation="0" />
+				<Compiler>
+					<Add option="-A" />
+					<Add option="-D_WIN64" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="lcc64.exe -v" />
+					<Add after="lcclib binlcc64\Release\GLaux.lib objlcc64\Release\src\FONT.obj objlcc64\Release\src\GLAUX.obj objlcc64\Release\src\IMAGE.obj objlcc64\Release\src\SHAPES.obj objlcc64\Release\src\TEAPOT.obj objlcc64\Release\src\TK.obj objlcc64\Release\src\TKDIB.obj objlcc64\Release\src\TKFONT.obj objlcc64\Release\src\TKIMAGE.obj objlcc64\Release\src\VECT3D.obj objlcc64\Release\src\XFORM.obj" />
+					<Add after="pedump /EXP binlcc64\Release\GLaux.dll" />
+					<Add after="pedump /EXP binlcc64\Release\GLaux.lib" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug BorlandC">
+				<Option platforms="Windows;" />
+				<Option output="binBC55/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objBC55/Debug" />
+				<Option type="3" />
+				<Option compiler="bcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-tWD" />
+					<Add option="-6" />
+					<Add option="-y" />
+					<Add option="-v" />
+					<Add option="-D_DEBUG" />
+					<Add option="-DDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-v" />
+					<Add option="/Gi" />
+					<Add library="import32" />
+					<Add library="cw32" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="gdi32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="user32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c bcc32 | grep Borland" />
+					<Add after="impdef binBC55\Debug\GLaux.def binBC55\Debug\GLaux.dll" />
+					<Add after="cmd /c type binBC55\Debug\GLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release BorlandC">
+				<Option platforms="Windows;" />
+				<Option output="binBC55/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objBC55/Release/" />
+				<Option type="3" />
+				<Option compiler="bcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-tWD" />
+					<Add option="-6" />
+					<Add option="-y" />
+					<Add option="-v" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-v" />
+					<Add option="/Gi" />
+					<Add library="import32" />
+					<Add library="cw32" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
+					<Add library="gdi32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="user32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c bcc32 | grep Borland" />
+					<Add after="impdef binBC55\Release\GLaux.def binBC55\Release\GLaux.dll" />
+					<Add after="cmd /c type binBC55\Release\GLaux.def" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug OW 32">
+				<Option platforms="Windows;" />
+				<Option output="binOW32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objOW32/Debug" />
+				<Option type="3" />
+				<Option compiler="ow" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-d2" />
+					<Add option="-wx" />
+					<Add option="-g" />
+					<Add option="-d_DEBUG" />
+					<Add option="-dDEBUG" />
+					<Add option="-dBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c wcc386 | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release OW 32">
+				<Option platforms="Windows;" />
+				<Option output="binOW32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objOW32/Release/" />
+				<Option type="3" />
+				<Option compiler="ow" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Option projectCompilerOptionsRelation="0" />
+				<Compiler>
+					<Add option="-wx" />
+					<Add option="-dNDEBUG" />
+					<Add option="-dBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c wcc386 | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug OW 64">
+				<Option platforms="Windows;" />
+				<Option output="binOW64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objOW64/Debug" />
+				<Option type="3" />
+				<Option compiler="openwatcom_w64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-d2" />
+					<Add option="-wx" />
+					<Add option="-d_DEBUG" />
+					<Add option="-dDEBUG" />
+					<Add option="-dBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c wcc386 | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release OW 64">
+				<Option platforms="Windows;" />
+				<Option output="binOW64/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objOW64/Release/" />
+				<Option type="3" />
+				<Option compiler="openwatcom_w64_compiler" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-wx" />
+					<Add option="-dNDEBUG" />
+					<Add option="-dBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="gdi32" />
+					<Add library="winmm" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c wcc386 | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug PELLES C">
+				<Option platforms="Windows;" />
+				<Option output="binPELLESC32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objPELLESC32/Debug" />
+				<Option type="3" />
+				<Option compiler="pelles_c_32b" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/Zi" />
+					<Add option="-Tx86-coff" />
+					<Add option="/Ze" />
+					<Add option="/c" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_X86_" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add option="/SUBSYSTEM:WINDOWS" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="gdi32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c pocc | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release PELLES C">
+				<Option platforms="Windows;" />
+				<Option output="binPELLESC32/Release/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objPELLESC32/Release/" />
+				<Option type="3" />
+				<Option compiler="pelles_c_32b" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Tx86-coff" />
+					<Add option="/Ze" />
+					<Add option="/c" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_X86_" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/MACHINE:X86" />
+					<Add option="/SUBSYSTEM:WINDOWS" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="gdi32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c pocc | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Debug PELLES C 64">
+				<Option platforms="Windows;" />
+				<Option output="binPELLESC64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objPELLESC64/Debug" />
+				<Option type="3" />
+				<Option compiler="pelles_c_64b" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/Zi" />
+					<Add option="-Tx64-coff" />
+					<Add option="/Ze" />
+					<Add option="/c" />
+					<Add option="/D_DEBUG" />
+					<Add option="/DDEBUG" />
+					<Add option="/D_AMD64_" />
+					<Add option="/D_WIN64" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add option="/MACHINE:X64" />
+					<Add option="/SUBSYSTEM:WINDOWS" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="gdi32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c pocc | grep Version" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release PELLES C 64">
+				<Option platforms="Windows;" />
+				<Option output="binPELLESC64/Release/Glaux" prefix_auto="1" extension_auto="1" />
+				<Option object_output="objPELLESC64/Release/" />
+				<Option type="3" />
+				<Option compiler="pelles_c_64b" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Tx64-coff" />
+					<Add option="/Ze" />
+					<Add option="/c" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_AMD64_" />
+					<Add option="/D_WIN64" />
+					<Add option="/DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="/MACHINE:X64" />
+					<Add option="/SUBSYSTEM:WINDOWS" />
+					<Add library="glu32" />
+					<Add library="opengl32" />
+					<Add library="advapi32" />
+					<Add library="comdlg32" />
+					<Add library="winmm" />
+					<Add library="shell32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="gdi32" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="cmd /c pocc | grep Version" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All_build" targets="Win32 Release;Win32 Debug;Win32 Debug Multithreaded DLL;Win32 Debug Multithreaded;Win32 Release Multithreaded DLL;Win32 Release Multithreaded;Win64 Release;Win64 Debug;Win64 Debug Multithreaded DLL;Win64 Debug Multithreaded;Win64 Release Multithreaded DLL;Win64 Release Multithreaded;Debug Mingw32 official;Release Mingw32 official;Debug Mingw64 CB;Release Mingw64 CB;Debug Mingw64 Dev-Cpp;Release Mingw64 Dev-Cpp;Debug CYGWIN 32;Release CYGWIN 32;Debug CYGWIN 64;Release CYGWIN 64;Debug CYGWIN N64;Release CYGWIN N64;Debug Mingw32 wl;Release Mingw32 wl;Debug Mingw64 wl;Release Mingw64 wl;Debug TDM MinGW32;Release TDM MinGW32;Debug TDM MinGW64;Release TDM MinGW64;Debug MSYS2W32;Release MSYS2W32;Debug MSYS2W64;Release MSYS2W64;Debug MSYS2 UCRT64;Release MSYS2 UCRT64;Debug CLANG Mingw32;Release CLANG Mingw32;Debug CLANG Mingw64;Release CLANG Mingw64;Debug CLANG MSX32;Release CLANG MSX32;Debug CLANG MSX64;Release CLANG MSX64;Debug CLANG MSYS W32;Release CLANG MSYS W32;Debug CLANG MSYS W64;Release CLANG MSYS W64;Debug Intel X32;Release Intel X32;Debug Intel X64;Release Intel X64;Debug DMC;Release DMC;Debug lcc;Release lcc;Debug lcc64;Release lcc64;Debug BorlandC;Release BorlandC;Debug OW 32;Release OW 32;Debug OW 64;Release OW 64;Debug PELLES C;Release PELLES C;Debug PELLES C 64;Release PELLES C 64;" />
+		</VirtualTargets>
+		<Unit filename="src/3D.H" />
+		<Unit filename="src/FONT.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/GLAUX.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/GLAUX.H" />
+		<Unit filename="src/GLOS.H" />
+		<Unit filename="src/IMAGE.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/SHAPES.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/TEAPOT.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/TEAPOT.H" />
+		<Unit filename="src/TK.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/TK.H" />
+		<Unit filename="src/TKDIB.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/TKFONT.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/TKIMAGE.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/VECT3D.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/XFORM.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
