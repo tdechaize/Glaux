@@ -3,7 +3,7 @@ Update of "very old and buggy" library GLAUX on Windows 11 64 bit (create very n
 
 It's just to see if this library can be recompiled with all free compilers C/C++ available on Windows 11 64 bit in ... 2025 (already !!).
 
-Result of test presence of library GLAUX into free compilers on Windows 
+# Result of test presence of library GLAUX into free compilers on Windows 
 				
 Behind, you can list version of all compilers installed on my computer with last Windows 11 24H4 version, and the
 objective of this note is to verify presence or not of GLAUX library with "native" installation of theses free 
