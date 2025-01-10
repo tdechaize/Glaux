@@ -62,8 +62,7 @@ extern "C" {
 #define class c_class
 #endif
 
-#if defined(__LCC__) && !defined(_WIN64)
-
+#if defined(__BORLANDC__)
 /* LibMain needed by lcc compiler - only for 32 bits compilation */
 int WINAPI LibMain(HANDLE hinstDLL, DWORD dwReason, LPVOID lpvReserved )
 {

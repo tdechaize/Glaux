@@ -4,84 +4,69 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>07-01-2025 at 15:51.00</u><br />
-Build ended on: <u>07-01-2025 at 15:51.02</u><p />
-<b>-------------- Build: Debug DMC in GLaux (compiler: Digital Mars Compiler)---------------</b><br />
-cmd /c dmc | grep Version<br />
-Digital Mars Compiler Version 8.42n<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\FONT.obj src\FONT.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\GLAUX.obj src\GLAUX.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\IMAGE.obj src\IMAGE.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\SHAPES.obj src\SHAPES.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\TEAPOT.obj src\TEAPOT.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\TK.obj src\TK.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\TKDIB.obj src\TKDIB.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\TKFONT.obj src\TKFONT.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\TKIMAGE.obj src\TKIMAGE.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\VECT3D.obj src\VECT3D.C<br />
-dmc.exe -mn -c  -WD -g -D_DEBUG -DDEBUG -DBUILD_DLL    -IC:\dm\include\gl -IC:\dm\include\win32 -IC:\dm\stlport\stlport -IC:\dm\include -oobjDMC\Debug\src\XFORM.obj src\XFORM.C<br />
-    if( !(raw = RawImageOpenAW(fileName, bUnicode)) )<br />
-                                                    ^<br />
-<font color="#0000ff">src\TKIMAGE.C(249) : Warning 2: possible unintended assignment</font><br />
-link.exe /NOLOGO /subsystem:windows /IMPL:binDMC\Debug\glaux.lib /DEBUG  objDMC\Debug\src\FONT.obj objDMC\Debug\src\GLAUX.obj objDMC\Debug\src\IMAGE.obj objDMC\Debug\src\SHAPES.obj objDMC\Debug\src\TEAPOT.obj objDMC\Debug\src\TK.obj objDMC\Debug\src\TKDIB.obj objDMC\Debug\src\TKFONT.obj objDMC\Debug\src\TKIMAGE.obj objDMC\Debug\src\VECT3D.obj objDMC\Debug\src\XFORM.obj, binDMC\Debug\GLaux.dll, , glu32.lib opengl32.lib comdlg32.lib gdi32.lib winmm.lib advapi32.lib user32.lib kernel32.lib,  ,<br />
-Output file is binDMC\Debug\GLaux.dll with size 1.01 MB<br />
-libunres -p binDMC\Debug\glaux.lib<br />
-_auxCloseWindow@0<br />
-_auxCreateFont@0<br />
-_auxDIBImageLoadA@4<br />
-_auxDIBImageLoadW@4<br />
-_auxDrawStrA@4<br />
-_auxDrawStrW@4<br />
-_auxExposeFunc@4<br />
-_auxGetColorMapSize@0<br />
-_auxGetDisplayMode@0<br />
-_auxGetDisplayModeID@0<br />
-_auxGetDisplayModePolicy@0<br />
-_auxGetHDC@0<br />
-_auxGetHGLRC@0<br />
-_auxGetHWND@0<br />
-_auxGetMouseLoc@8<br />
-_auxIdleFunc@4<br />
-_auxInitDisplayMode@4<br />
-_auxInitDisplayModeID@4<br />
-_auxInitDisplayModePolicy@4<br />
-_auxInitPosition@16<br />
-_auxKeyFunc@8<br />
-_auxMainLoop@4<br />
-_auxMouseFunc@12<br />
-_auxQuit@0<br />
-_auxRGBImageLoadA@4<br />
-_auxRGBImageLoadW@4<br />
-_auxReshapeFunc@4<br />
-_auxSetFogRamp@8<br />
-_auxSetGreyRamp@0<br />
-_auxSetOneColor@16<br />
-_auxSetRGBMap@8<br />
-_auxSolidBox@24<br />
-_auxSolidCone@16<br />
-_auxSolidCube@8<br />
-_auxSolidCylinder@16<br />
-_auxSolidDodecahedron@8<br />
-_auxSolidIcosahedron@8<br />
-_auxSolidOctahedron@8<br />
-_auxSolidSphere@8<br />
-_auxSolidTeapot@8<br />
-_auxSolidTetrahedron@8<br />
-_auxSolidTorus@16<br />
-_auxSwapBuffers@0<br />
-_auxWireBox@24<br />
-_auxWireCone@16<br />
-_auxWireCube@8<br />
-_auxWireCylinder@16<br />
-_auxWireDodecahedron@8<br />
-_auxWireIcosahedron@8<br />
-_auxWireOctahedron@8<br />
-_auxWireSphere@8<br />
-_auxWireTeapot@8<br />
-_auxWireTetrahedron@8<br />
-_auxWireTorus@16<br />
-<font color="#0000ff">Process terminated with status 0 (0 minute(s), 1 second(s))</font><br />
-<font color="#0000ff">0 error(s), 1 warning(s) (0 minute(s), 1 second(s))</font><br />
+Build started on: <u>10-01-2025 at 17:22.14</u><br />
+Build ended on: <u>10-01-2025 at 17:22.30</u><p />
+<b>-------------- Build: Debug PELLES C in GLaux (compiler: Pelles C (32b))---------------</b><br />
+cmd /c pocc | grep Version<br />
+File STDIN:<br />
+Pelles ISO C Compiler, Version 12.00.1<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\FONT.C /FoobjPELLESC32\Debug\src\FONT.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\GLAUX.C /FoobjPELLESC32\Debug\src\GLAUX.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\IMAGE.C /FoobjPELLESC32\Debug\src\IMAGE.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\SHAPES.C /FoobjPELLESC32\Debug\src\SHAPES.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\TEAPOT.C /FoobjPELLESC32\Debug\src\TEAPOT.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\TK.C /FoobjPELLESC32\Debug\src\TK.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\TKDIB.C /FoobjPELLESC32\Debug\src\TKDIB.obj<br />
+pocc.exe /nologo  /Zi -Tx86-coff /Ze /c /D_DEBUG /DDEBUG /D_X86_ /DBUILD_DLL  -Tx86-coff /D_X86_   /IC:\PellesC\include\Win /IC:\PellesC\include /c src\TKFONT.C /FoobjPELLESC32\Debug\src\TKFONT.obj<br />
+<font color="#0000ff">src\SHAPES.C(598): warning #2229: Local 'x2' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\SHAPES.C(598): warning #2229: Local 'x1' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\SHAPES.C(598): warning #2229: Local 'x0' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\SHAPES.C(645): warning #2117: Old-style function definition for 'initdodec'.</font><br />
+<font color="#0000ff">src\TKDIB.C(410): warning #2229: Local 'pvBitsFile' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKDIB.C(345): warning #2229: Local 'pvBitsFile' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TEAPOT.C(76): warning #2215: Conversion from 'double' to 'float'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TEAPOT.C(76): warning #2215: Conversion from 'double' to 'float'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TEAPOT.C(76): warning #2215: Conversion from 'double' to 'float'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TEAPOT.C(123): warning #2215: Conversion from 'double' to 'float'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TEAPOT.C(123): warning #2215: Conversion from 'double' to 'float'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TEAPOT.C(123): warning #2215: Conversion from 'double' to 'float'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TKDIB.C(302): warning #2229: Local 'pvBitsFile' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 1 second(s))</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 2 second(s))</font><br />
+<font color="#0000ff">src\TK.C(580): warning #2241: The function 'GetVersionExA' is marked as deprecated. </font><br />
+<font color="#0000ff">src\TK.C(1659): warning #2215: Conversion from 'int' to 'unsigned char'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TK.C(1826): warning #2229: Local 'iMinEntry' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TK.C(1825): warning #2229: Local 'iMinEntry' is potentially used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TK.C(1965): warning #2215: Conversion from 'unsigned int' to 'unsigned short int'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TK.C(2015): warning #2215: Conversion from 'unsigned int' to 'unsigned short int'; possible loss of data or unexpected result.</font><br />
+<font color="#0000ff">src\TK.C(2044): warning #2238: Array index '255' is out-of-bounds for 'PALETTEENTRY (aka struct tagPALETTEENTRY) [1]'.</font><br />
+<font color="#0000ff">src\TK.C(2045): warning #2238: Array index '255' is out-of-bounds for 'PALETTEENTRY (aka struct tagPALETTEENTRY) [1]'.</font><br />
+<font color="#0000ff">src\TK.C(2046): warning #2238: Array index '255' is out-of-bounds for 'PALETTEENTRY (aka struct tagPALETTEENTRY) [1]'.</font><br />
+<font color="#0000ff">src\TK.C(2049): warning #2238: Array index '255' is out-of-bounds for 'PALETTEENTRY (aka struct tagPALETTEENTRY) [1]'.</font><br />
+<font color="#0000ff">src\TK.C(2442): warning #2116: Local 'hStock' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TK.C(2441): warning #2116: Local 'hStock' is used without being initialized (or using a dangling value).</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 3 second(s))</font><br />
+<font color="#0000ff">src\TKFONT.C(13655): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13651): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13648): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13644): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13643): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13684): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13680): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13677): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13673): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13672): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13713): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13709): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13706): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13702): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#0000ff">src\TKFONT.C(13701): warning #2116: Local 'mode' is used without being initialized (or using a dangling value).</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 4 second(s))</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 15 second(s))</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 15 second(s))</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 15 second(s))</font><br />
+<font color="#a00000">Process terminated with status -1073741819 (0 minute(s), 15 second(s))</font><br />
+<font color="#a00000">0 error(s), 40 warning(s) (0 minute(s), 15 second(s))</font><br />
 </tt>
 </body>
 </html>

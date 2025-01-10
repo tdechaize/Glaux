@@ -1597,7 +1597,7 @@
 					<Add option="-DBUILD_DLL" />
 				</Compiler>
 				<Linker>
-					<Add option="-entry LibMain" />
+					<Add option="-entry DllMain" />
 					<Add option="-nounderscores" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
@@ -1627,7 +1627,7 @@
 					<Add option="-DBUILD_DLL" />
 				</Compiler>
 				<Linker>
-					<Add option="-entry LibMain" />
+					<Add option="-entry DllMain" />
 					<Add option="-nounderscores" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
@@ -1660,6 +1660,7 @@
 					<Add option="-DBUILD_DLL" />
 				</Compiler>
 				<Linker>
+					<Add option="-entry DllMain" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="advapi32" />
@@ -1689,6 +1690,7 @@
 					<Add option="-DBUILD_DLL" />
 				</Compiler>
 				<Linker>
+					<Add option="-entry DllMain" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="advapi32" />
