@@ -1,0 +1,242 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.Cpp.MSVC.Toolset.Common.props(32,5): warning MSB4211: La propriété "IntDir" est définie à une valeur pour la première fois, mais elle a déjà été consommée à "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Platforms\x64\ImportBefore\Default\Intel.Cpp1A.x64.default.props (73,5)".
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1123,5): warning MSB4211: La propriété "GetTargetPathDependsOn" est définie à une valeur pour la première fois, mais elle a déjà été consommée à "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets (2232,5)".
+  FONT.C
+C:\src\OpenGL\Glaux\FONT.C(74,21): warning C4267: 'fonction' : conversion de 'size_t' en 'GLsizei', perte possible de données
+C:\src\OpenGL\Glaux\FONT.C(76,14): warning C4267: 'fonction' : conversion de 'size_t' en 'GLsizei', perte possible de données
+  GLAUX.C
+C:\src\OpenGL\Glaux\GLAUX.C(278,39): error C2375: 'auxInitWindowA' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(263,17):
+      voir la déclaration de 'auxInitWindowA'
+  
+C:\src\OpenGL\Glaux\GLAUX.C(283,39): error C2375: 'auxInitWindowW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(264,17):
+      voir la déclaration de 'auxInitWindowW'
+  
+C:\src\OpenGL\Glaux\GLAUX.C(340,37): error C2375: 'auxGetHWND' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(349,16):
+      voir la déclaration de 'auxGetHWND'
+  
+C:\src\OpenGL\Glaux\GLAUX.C(345,36): error C2375: 'auxGetHDC' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(350,16):
+      voir la déclaration de 'auxGetHDC'
+  
+C:\src\OpenGL\Glaux\GLAUX.C(350,38): error C2375: 'auxGetHGLRC' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(351,16):
+      voir la déclaration de 'auxGetHGLRC'
+  
+  IMAGE.C
+C:\src\OpenGL\Glaux\IMAGE.C(44,50): error C2375: 'auxRGBImageLoadA' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(301,28):
+      voir la déclaration de 'auxRGBImageLoadA'
+  
+C:\src\OpenGL\Glaux\IMAGE.C(49,50): error C2375: 'auxRGBImageLoadW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(302,28):
+      voir la déclaration de 'auxRGBImageLoadW'
+  
+C:\src\OpenGL\Glaux\IMAGE.C(54,50): error C2375: 'auxDIBImageLoadA' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(309,28):
+      voir la déclaration de 'auxDIBImageLoadA'
+  
+C:\src\OpenGL\Glaux\IMAGE.C(59,50): error C2375: 'auxDIBImageLoadW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\glaux.h(310,28):
+      voir la déclaration de 'auxDIBImageLoadW'
+  
+  SHAPES.C
+C:\src\OpenGL\Glaux\SHAPES.C(475,35): error C2375: 'icosahedron' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\SHAPES.C(75,13):
+      voir la déclaration de 'icosahedron'
+  
+C:\src\OpenGL\Glaux\SHAPES.C(488,35): error C2375: 'octahedron' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\SHAPES.C(76,13):
+      voir la déclaration de 'octahedron'
+  
+C:\src\OpenGL\Glaux\SHAPES.C(502,35): error C2375: 'tetrahedron' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\SHAPES.C(77,13):
+      voir la déclaration de 'tetrahedron'
+  
+C:\src\OpenGL\Glaux\SHAPES.C(654,35): error C2375: 'dodecahedron' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\SHAPES.C(85,13):
+      voir la déclaration de 'dodecahedron'
+  
+C:\src\OpenGL\Glaux\SHAPES.C(680,35): error C2375: 'pentagon' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\SHAPES.C(86,13):
+      voir la déclaration de 'pentagon'
+  
+  TEAPOT.C
+  TK.C
+C:\src\OpenGL\Glaux\TK.C(407,28): error C2375: 'tkErrorPopups' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(254,13):
+      voir la déclaration de 'tkErrorPopups'
+  
+C:\src\OpenGL\Glaux\TK.C(412,28): error C2375: 'tkCloseWindow' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(210,13):
+      voir la déclaration de 'tkCloseWindow'
+  
+C:\src\OpenGL\Glaux\TK.C(418,28): error C2375: 'tkExec' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(213,13):
+      voir la déclaration de 'tkExec'
+  
+C:\src\OpenGL\Glaux\TK.C(472,28): error C2375: 'tkExposeFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(214,13):
+      voir la déclaration de 'tkExposeFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(477,28): error C2375: 'tkReshapeFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(215,13):
+      voir la déclaration de 'tkReshapeFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(482,28): error C2375: 'tkDisplayFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(216,13):
+      voir la déclaration de 'tkDisplayFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(487,28): error C2375: 'tkKeyDownFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(217,13):
+      voir la déclaration de 'tkKeyDownFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(492,28): error C2375: 'tkMouseDownFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(218,13):
+      voir la déclaration de 'tkMouseDownFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(497,28): error C2375: 'tkMouseUpFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(219,13):
+      voir la déclaration de 'tkMouseUpFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(502,28): error C2375: 'tkMouseMoveFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(220,13):
+      voir la déclaration de 'tkMouseMoveFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(507,28): error C2375: 'tkIdleFunc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(221,13):
+      voir la déclaration de 'tkIdleFunc'
+  
+C:\src\OpenGL\Glaux\TK.C(512,28): error C2375: 'tkInitPosition' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(205,13):
+      voir la déclaration de 'tkInitPosition'
+  
+C:\src\OpenGL\Glaux\TK.C(531,28): error C2375: 'tkInitDisplayMode' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(204,13):
+      voir la déclaration de 'tkInitDisplayMode'
+  
+C:\src\OpenGL\Glaux\TK.C(536,28): error C2375: 'tkInitDisplayModePolicy' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(206,13):
+      voir la déclaration de 'tkInitDisplayModePolicy'
+  
+C:\src\OpenGL\Glaux\TK.C(541,30): error C2375: 'tkInitDisplayModeID' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(207,15):
+      voir la déclaration de 'tkInitDisplayModeID'
+  
+C:\src\OpenGL\Glaux\TK.C(548,30): error C2375: 'tkInitWindow' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(208,15):
+      voir la déclaration de 'tkInitWindow'
+  
+C:\src\OpenGL\Glaux\TK.C(558,30): error C2375: 'tkInitWindowAW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(209,15):
+      voir la déclaration de 'tkInitWindowAW'
+  
+C:\src\OpenGL\Glaux\TK.C(570,24): warning C4996: 'GetVersionExA': a été déclaré déconseillé
+C:\src\OpenGL\Glaux\TK.C(736,28): error C2375: 'tkQuit' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(211,13):
+      voir la déclaration de 'tkQuit'
+  
+C:\src\OpenGL\Glaux\TK.C(744,28): error C2375: 'tkSetOneColor' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(231,13):
+      voir la déclaration de 'tkSetOneColor'
+  
+C:\src\OpenGL\Glaux\TK.C(805,28): error C2375: 'tkSetFogRamp' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(232,13):
+      voir la déclaration de 'tkSetFogRamp'
+  
+C:\src\OpenGL\Glaux\TK.C(882,28): error C2375: 'tkSetGreyRamp' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(233,13):
+      voir la déclaration de 'tkSetGreyRamp'
+  
+C:\src\OpenGL\Glaux\TK.C(913,28): error C2375: 'tkSetRGBMap' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(234,13):
+      voir la déclaration de 'tkSetRGBMap'
+  
+C:\src\OpenGL\Glaux\TK.C(943,28): error C2375: 'tkSwapBuffers' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(223,13):
+      voir la déclaration de 'tkSwapBuffers'
+  
+C:\src\OpenGL\Glaux\TK.C(950,29): error C2375: 'tkGetColorMapSize' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(225,14):
+      voir la déclaration de 'tkGetColorMapSize'
+  
+C:\src\OpenGL\Glaux\TK.C(960,28): error C2375: 'tkGetMouseLoc' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(226,13):
+      voir la déclaration de 'tkGetMouseLoc'
+  
+C:\src\OpenGL\Glaux\TK.C(978,28): error C2375: 'tkGetHWND' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(249,14):
+      voir la déclaration de 'tkGetHWND'
+  
+C:\src\OpenGL\Glaux\TK.C(983,27): error C2375: 'tkGetHDC' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(250,14):
+      voir la déclaration de 'tkGetHDC'
+  
+C:\src\OpenGL\Glaux\TK.C(988,29): error C2375: 'tkGetHRC' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(251,14):
+      voir la déclaration de 'tkGetHRC'
+  
+C:\src\OpenGL\Glaux\TK.C(993,30): error C2375: 'tkGetDisplayModePolicy' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(228,15):
+      voir la déclaration de 'tkGetDisplayModePolicy'
+  
+C:\src\OpenGL\Glaux\TK.C(998,29): error C2375: 'tkGetDisplayModeID' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(227,14):
+      voir la déclaration de 'tkGetDisplayModeID'
+  
+C:\src\OpenGL\Glaux\TK.C(1003,30): error C2375: 'tkGetDisplayMode' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(229,15):
+      voir la déclaration de 'tkGetDisplayMode'
+  
+C:\src\OpenGL\Glaux\TK.C(1083,22): warning C4312: 'cast de type' : la conversion de 'DWORD' en 'HWND' d'une taille supérieure
+C:\src\OpenGL\Glaux\TK.C(1341,12): warning C4244: 'return' : conversion de 'LRESULT' en 'long', perte possible de données
+C:\src\OpenGL\Glaux\TK.C(1401,13): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\src\OpenGL\Glaux\TK.C(2267,5): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  TKDIB.C
+C:\src\OpenGL\Glaux\TKDIB.C(115,39): error C2375: 'tkDIBImageLoadAW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(240,24):
+      voir la déclaration de 'tkDIBImageLoadAW'
+  
+C:\src\OpenGL\Glaux\TKDIB.C(117,39): error C2375: 'tkDIBImageLoad' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(239,24):
+      voir la déclaration de 'tkDIBImageLoad'
+  
+C:\src\OpenGL\Glaux\TKDIB.C(161,39): error C2375: 'tkDIBImageLoadAW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(240,24):
+      voir la déclaration de 'tkDIBImageLoadAW'
+  
+  TKFONT.C
+C:\src\OpenGL\Glaux\TKFONT.C(13633,30): error C2375: 'tkCreateStrokeFont' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(242,15):
+      voir la déclaration de 'tkCreateStrokeFont'
+  
+C:\src\OpenGL\Glaux\TKFONT.C(13662,30): error C2375: 'tkCreateOutlineFont' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(243,15):
+      voir la déclaration de 'tkCreateOutlineFont'
+  
+C:\src\OpenGL\Glaux\TKFONT.C(13691,30): error C2375: 'tkCreateFilledFont' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(244,15):
+      voir la déclaration de 'tkCreateFilledFont'
+  
+C:\src\OpenGL\Glaux\TKFONT.C(13720,30): error C2375: 'tkCreateBitmapFont' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(245,15):
+      voir la déclaration de 'tkCreateBitmapFont'
+  
+C:\src\OpenGL\Glaux\TKFONT.C(13733,28): error C2375: 'tkDrawStr' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(246,13):
+      voir la déclaration de 'tkDrawStr'
+  
+C:\src\OpenGL\Glaux\TKFONT.C(13738,17): warning C4267: 'fonction' : conversion de 'size_t' en 'GLsizei', perte possible de données
+  TKIMAGE.C
+C:\src\OpenGL\Glaux\TKIMAGE.C(229,39): error C2375: 'tkRGBImageLoad' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(236,24):
+      voir la déclaration de 'tkRGBImageLoad'
+  
+C:\src\OpenGL\Glaux\TKIMAGE.C(234,39): error C2375: 'tkRGBImageLoadAW' : redéfinition ; liaison différente
+      C:\src\OpenGL\Glaux\tk.h(237,24):
+      voir la déclaration de 'tkRGBImageLoadAW'
+  
+  VECT3D.C
+  XFORM.C
+  Génération de code en cours...
