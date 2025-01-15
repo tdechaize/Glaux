@@ -1887,139 +1887,123 @@
 				<Option output="binPELLESC32/Debug/GLaux" prefix_auto="1" extension_auto="1" />
 				<Option object_output="objPELLESC32/Debug" />
 				<Option type="3" />
-				<Option compiler="pelles_c_32b" />
+				<Option compiler="pelles_c_x32" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
+				<Option projectResourceIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
 				<Compiler>
-					<Add option="/Zi" />
-					<Add option="-Tx86-coff" />
 					<Add option="/Ze" />
-					<Add option="/c" />
-					<Add option="/D_DEBUG" />
-					<Add option="/DDEBUG" />
-					<Add option="/D_X86_" />
 					<Add option="/DBUILD_DLL" />
 				</Compiler>
 				<Linker>
-					<Add option="/debug" />
-					<Add option="/SUBSYSTEM:WINDOWS" />
-					<Add library="glu32" />
-					<Add library="opengl32" />
-					<Add library="advapi32" />
-					<Add library="comdlg32" />
-					<Add library="winmm" />
-					<Add library="shell32" />
-					<Add library="user32" />
-					<Add library="kernel32" />
-					<Add library="gdi32" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
 				</Linker>
-				<ExtraCommands>
-					<Add before="cmd /c pocc | grep Version" />
-				</ExtraCommands>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
 			</Target>
 			<Target title="Release PELLES C">
 				<Option platforms="Windows;" />
 				<Option output="binPELLESC32/Release/GLaux" prefix_auto="1" extension_auto="1" />
 				<Option object_output="objPELLESC32/Release/" />
 				<Option type="3" />
-				<Option compiler="pelles_c_32b" />
+				<Option compiler="pelles_c_x32" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
+				<Option projectResourceIncludeDirsRelation="-1" />
 				<Compiler>
-					<Add option="-Tx86-coff" />
 					<Add option="/Ze" />
-					<Add option="/c" />
-					<Add option="/DNDEBUG" />
-					<Add option="/D_X86_" />
 					<Add option="/DBUILD_DLL" />
 				</Compiler>
 				<Linker>
-					<Add option="/MACHINE:X86" />
-					<Add option="/SUBSYSTEM:WINDOWS" />
-					<Add library="glu32" />
-					<Add library="opengl32" />
-					<Add library="advapi32" />
-					<Add library="comdlg32" />
-					<Add library="winmm" />
-					<Add library="shell32" />
-					<Add library="user32" />
-					<Add library="kernel32" />
-					<Add library="gdi32" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
 				</Linker>
-				<ExtraCommands>
-					<Add before="cmd /c pocc | grep Version" />
-				</ExtraCommands>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
 			</Target>
 			<Target title="Debug PELLES C 64">
 				<Option platforms="Windows;" />
 				<Option output="binPELLESC64/Debug/GLaux" prefix_auto="1" extension_auto="1" />
 				<Option object_output="objPELLESC64/Debug" />
 				<Option type="3" />
-				<Option compiler="pelles_c_64b" />
+				<Option compiler="pelles_c_x64" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
-					<Add option="/Zi" />
-					<Add option="-Tx64-coff" />
 					<Add option="/Ze" />
-					<Add option="/c" />
-					<Add option="/D_DEBUG" />
-					<Add option="/DDEBUG" />
-					<Add option="/D_AMD64_" />
-					<Add option="/D_WIN64" />
 					<Add option="/DBUILD_DLL" />
 				</Compiler>
 				<Linker>
-					<Add option="/debug" />
-					<Add option="/MACHINE:X64" />
-					<Add option="/SUBSYSTEM:WINDOWS" />
-					<Add library="glu32" />
-					<Add library="opengl32" />
-					<Add library="advapi32" />
-					<Add library="comdlg32" />
-					<Add library="winmm" />
-					<Add library="shell32" />
-					<Add library="user32" />
-					<Add library="kernel32" />
-					<Add library="gdi32" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
 				</Linker>
-				<ExtraCommands>
-					<Add before="cmd /c pocc | grep Version" />
-				</ExtraCommands>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
 			</Target>
 			<Target title="Release PELLES C 64">
 				<Option platforms="Windows;" />
 				<Option output="binPELLESC64/Release/Glaux" prefix_auto="1" extension_auto="1" />
 				<Option object_output="objPELLESC64/Release/" />
 				<Option type="3" />
-				<Option compiler="pelles_c_64b" />
+				<Option compiler="pelles_c_x64" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
-					<Add option="-Tx64-coff" />
 					<Add option="/Ze" />
-					<Add option="/c" />
-					<Add option="/DNDEBUG" />
-					<Add option="/D_AMD64_" />
-					<Add option="/D_WIN64" />
 					<Add option="/DBUILD_DLL" />
 				</Compiler>
 				<Linker>
-					<Add option="/MACHINE:X64" />
-					<Add option="/SUBSYSTEM:WINDOWS" />
-					<Add library="glu32" />
-					<Add library="opengl32" />
-					<Add library="advapi32" />
-					<Add library="comdlg32" />
-					<Add library="winmm" />
-					<Add library="shell32" />
-					<Add library="user32" />
-					<Add library="kernel32" />
-					<Add library="gdi32" />
+					<Add library="glu32.lib" />
+					<Add library="opengl32.lib" />
+					<Add library="gdi32.lib" />
+					<Add library="winmm.lib" />
+					<Add library="advapi32.lib" />
+					<Add library="user32.lib" />
+					<Add library="kernel32.lib" />
 				</Linker>
-				<ExtraCommands>
-					<Add before="cmd /c pocc | grep Version" />
-				</ExtraCommands>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
 			</Target>
 		</Build>
 		<VirtualTargets>
